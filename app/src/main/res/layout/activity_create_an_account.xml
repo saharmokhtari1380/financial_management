@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".create_an_account">
 
     <ImageView
         android:id="@+id/imageView"
@@ -42,7 +42,7 @@
                 android:background="@drawable/background"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
-                android:text="Login"
+                android:text="Create An Account"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -58,7 +58,7 @@
                 android:drawableLeft="@drawable/user"
                 android:drawablePadding="8dp"
                 android:ems="10"
-                android:hint="User Name"
+                android:hint="Full Name"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -70,11 +70,39 @@
                 android:layout_marginRight="10dp"
                 android:height="55dp"
                 android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/pass"
+                android:drawableLeft="@drawable/mail"
                 android:drawablePadding="8dp"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="Email"
                 android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:height="55dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/pass"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:height="55dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/refer"
+                android:ems="10"
+                android:hint="Refer Code"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/button"
@@ -84,17 +112,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:height="55dp"
-                android:text="Login" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:height="55dp"
-                android:text="I Dont Have An Account" />
+                android:text="Create" />
 
         </LinearLayout>
 
