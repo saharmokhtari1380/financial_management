@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161218433024",
+    "project_id": "financial-management-c5967",
+    "storage_bucket": "financial-management-c5967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161218433024:android:47c312c74445641bff08e5",
+        "android_client_info": {
+          "package_name": "ir.shariaty.financialmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161218433024-hve2ktt4lalbale9ph987ivobqe4sk0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx93kQDLssKIqDLku0rJur4hKG1u8iDFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161218433024-hve2ktt4lalbale9ph987ivobqe4sk0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
