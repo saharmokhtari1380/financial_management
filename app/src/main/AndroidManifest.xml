@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinancialManagement">
+        <activity android:name=".DushboardActivity"></activity>
         <activity android:name=".submit" />
         <activity android:name=".Home_page" />
         <activity android:name=".create_an_account" />
