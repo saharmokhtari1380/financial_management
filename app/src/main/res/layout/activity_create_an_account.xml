@@ -50,7 +50,7 @@
                 android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/fullName"
+                android:id="@+id/emailbox"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginLeft="10dp"
@@ -65,7 +65,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/Email"
+                android:id="@+id/passwordbox"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginLeft="10dp"

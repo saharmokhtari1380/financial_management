@@ -11,6 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="117dp"
         android:layout_height="116dp"
+        android:foregroundTint="#D61313"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,7 @@
                 android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/fullName"
+                android:id="@+id/emailbox"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginLeft="10dp"
@@ -61,11 +62,12 @@
                 android:drawableLeft="@drawable/user"
                 android:drawablePadding="8dp"
                 android:ems="10"
-                android:hint="User Name"
+                android:foregroundTint="#D10909"
+                android:hint="Email"
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/Email"
+                android:id="@+id/passwordbox"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginLeft="10dp"

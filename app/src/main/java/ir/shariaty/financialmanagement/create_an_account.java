@@ -32,8 +32,8 @@ public class create_an_account extends AppCompatActivity {
             database=FirebaseFirestore.getInstance();
         auth=FirebaseAuth.getInstance();
 
-        fullName=findViewById(R.id.fullName);
-        Email=findViewById(R.id.Email);
+        fullName=findViewById(R.id.emailbox);
+        Email=findViewById(R.id.passwordbox);
         password=findViewById(R.id.password);
         Refer=findViewById(R.id.Refer);
 
