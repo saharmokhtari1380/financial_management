@@ -1,72 +1,61 @@
 package ir.shariaty.financialmanagement;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+
+import ir.shariaty.financialmanagement.databinding.ActivityMainBinding;
 
 //import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
-    FirebaseAuth auth;
-    EditText emaibox , passwordbox;
-    Button loginbtn , signUpbtn;
-    ProgressDialog dialog;
+
+    ActivityMainBinding binding;
+    FirebaseFirestore database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        dialog=new ProgressDialog(this);
-        dialog.setMessage("please wait ...");
-        auth= FirebaseAuth.getInstance();
+//        setSupportActionBar(binding.toolbarname);
 
-        emaibox=findViewById(R.id.emailbox);
-        passwordbox=findViewById(R.id.passwordbox);
-            loginbtn=findViewById(R.id.createbtn);
-            signUpbtn=findViewById(R.id.signUpbtn);
+        database=FirebaseFirestore.getInstance();
 
-            loginbtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    dialog.show();
-                    String email, pass;
-                    email = emaibox.getText().toString();
-                    pass= passwordbox.getText().toString();
-                    auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull  Task<AuthResult> task) {
-                            if (task.isSuccessful()){
-                                dialog.dismiss();
-                                startActivity(new Intent(MainActivity.this,Home_page.class));
 
-                            }
-                            else {
-                                Toast.makeText(MainActivity.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+        ArrayList<ExpenseModel> expenses = new ArrayList<>();
+//
+        ExpenseAdaptor adaptor = new ExpenseAdaptor(this,expenses);
+
+        database.collection("expenses").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable  QuerySnapshot value, @Nullable  FirebaseFirestoreException error) {
+
+                expenses.clear();
+                for (DocumentSnapshot snapshot:value.getDocuments()){
+                    ExpenseModel model = snapshot.toObject(ExpenseModel.class);
+                    model.setExpenseId(snapshot.getId());
+                    expenses.add(model);
                 }
-            });
+                    adaptor.notifyDataSetChanged();
+            }
+        });
 
-            signUpbtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(MainActivity.this,create_an_account.class));
-                }
-            });
+        binding.ExpenseList.setLayoutManager(new GridLayoutManager(this,1));
+        binding.ExpenseList.setAdapter(adaptor);
+
+
 
     }
 }

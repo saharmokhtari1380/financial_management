@@ -61,7 +61,7 @@ public class create_an_account extends AppCompatActivity {
                             database.collection("Users").document() .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
-                                    startActivity(new Intent(create_an_account.this,MainActivity.class));
+                                    startActivity(new Intent(create_an_account.this, MainActivity.class));
 
                                 }
                             });

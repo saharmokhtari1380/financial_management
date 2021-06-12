@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Home_page">
+    tools:context=".Home_Page">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/subbtn"
         android:layout_width="116dp"
         android:layout_height="92dp"
         android:layout_marginStart="16dp"
@@ -105,7 +105,7 @@
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintStart_toEndOf="@+id/subbtn"
         app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <Button
@@ -124,7 +124,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintTop_toBottomOf="@+id/subbtn" />
 
     <Button
         android:id="@+id/button15"
