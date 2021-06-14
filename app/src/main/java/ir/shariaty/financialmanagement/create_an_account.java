@@ -1,14 +1,14 @@
 package ir.shariaty.financialmanagement;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -38,7 +38,6 @@ public class create_an_account extends AppCompatActivity {
         Refer=findViewById(R.id.Refer);
 
         createbtn=findViewById(R.id.createbtn);
-
         createbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +60,7 @@ public class create_an_account extends AppCompatActivity {
                             database.collection("Users").document() .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
-                                    startActivity(new Intent(create_an_account.this, MainActivity.class));
+                                    startActivity(new Intent(create_an_account.this, Home_Page.class));
 
                                 }
                             });

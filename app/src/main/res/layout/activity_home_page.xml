@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/viewbtn"
         android:layout_width="116dp"
         android:layout_height="92dp"
         android:layout_marginStart="16dp"
@@ -140,7 +140,7 @@
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button14"
+        app:layout_constraintStart_toEndOf="@+id/viewbtn"
         app:layout_constraintTop_toBottomOf="@+id/button13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

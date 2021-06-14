@@ -37,7 +37,7 @@ public class loginPage extends AppCompatActivity {
         signUpbtn=findViewById(R.id.signUpbtn);
 
         if (auth.getCurrentUser()!=null){
-            startActivity(new Intent(loginPage.this,MainActivity.class));
+            startActivity(new Intent(loginPage.this,Home_Page.class));
             finish();
         }
 
@@ -53,7 +53,7 @@ public class loginPage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             dialog.dismiss();
-                            startActivity(new Intent(loginPage.this,MainActivity.class));
+                            startActivity(new Intent(loginPage.this,Home_Page.class));
                             finish();
 
                         }

@@ -51,8 +51,8 @@ public class ExpenseAdaptor  extends RecyclerView.Adapter <ExpenseAdaptor.expens
         public expenseViewHolder(@NonNull  View itemView) {
             super(itemView);
 //            imageView= itemView.findViewById(R.id.image);
-            textView=itemView.findViewById(R.id.textView3);
-            textView2=itemView.findViewById(R.id.textView5);
+            textView=itemView.findViewById(R.id.txtcat);
+            textView2=itemView.findViewById(R.id.txtprice);
         }
     }
 }

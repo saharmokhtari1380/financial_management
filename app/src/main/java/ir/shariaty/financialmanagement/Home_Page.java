@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home_Page extends AppCompatActivity {
-    Button subbtn;
+    Button subbtn , viewbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,13 @@ public class Home_Page extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         subbtn=findViewById(R.id.subbtn);
+        viewbtn=findViewById(R.id.viewbtn);
+        viewbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home_Page.this,MainActivity.class));
+            }
+        });
 
         subbtn.setOnClickListener(new View.OnClickListener() {
             @Override

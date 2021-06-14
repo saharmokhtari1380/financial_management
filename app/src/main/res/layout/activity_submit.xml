@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.413">
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -61,7 +61,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
@@ -72,7 +72,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="115dp"
@@ -83,7 +83,7 @@
             android:text="20 خرداد 1400" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
+            android:id="@+id/details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="175dp"
@@ -93,17 +93,36 @@
             android:hint="توضیحات"
             android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="149dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="250dp"
-            android:backgroundTint="@color/color_blue"
-            android:text="ثبت هزینه"
-            android:textColor="@color/color_gray"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/exsubbtn"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="250dp"
+                android:backgroundTint="@color/color_blue"
+                android:text="ثبت هزینه"
+                android:textColor="@color/color_gray"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/salarysubbtn"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/color_blue"
+                android:gravity="center"
+                android:text="ثبت درآمد"
+                android:textColor="@color/color_gray"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
