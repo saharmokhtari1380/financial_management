@@ -51,7 +51,7 @@
                     android:background="@drawable/background"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:text="Login"
+                    android:text="ورود"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -95,7 +95,7 @@
                     android:layout_marginRight="10dp"
                     android:height="55dp"
                     android:backgroundTint="@color/color_blue"
-                    android:text="Login"
+                    android:text="ورود"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -109,7 +109,7 @@
                     android:layout_marginRight="10dp"
                     android:height="55dp"
                     android:backgroundTint="@color/color_gray"
-                    android:text="I Dont Have An Account"
+                    android:text="حساب کاربری ندارم"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 

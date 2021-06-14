@@ -45,7 +45,7 @@
                 android:background="@drawable/background"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
-                android:text="Create An Account"
+                android:text="ساخت حساب کاربری"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -116,7 +116,7 @@
                 android:layout_marginRight="10dp"
                 android:height="55dp"
                 android:backgroundTint="@color/color_blue"
-                android:text="Create"
+                android:text="ساخت حساب"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
